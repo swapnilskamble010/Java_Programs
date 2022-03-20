@@ -4,6 +4,7 @@ public class EmpWage {
 	final byte WAGE_PER_HOUR = 20;
 	byte empHour = 0;
 	byte workingDaysCount = 0;
+	
 	void checkAttendance(double empCheck) {
 		switch((int)empCheck) {
 		case 1:
@@ -24,9 +25,7 @@ public class EmpWage {
 		}
 	}
 	
-	public static void main(String[] args) {
-		System.out.println("Welcome to Employee Wage Computation Program using OOP's concepts");
-		
+	void wageCalculation() {
 		int totalEmpWage = 0;
 		int totalEmpHour = 0;
 		EmpWage empWage = new EmpWage();
@@ -43,6 +42,12 @@ public class EmpWage {
 			System.out.println("Total Working Days of Employee is : " + empWage.workingDaysCount);
 			totalEmpWage += dailyEmpWage;				
 			System.out.println("Monthly Wage of Employee is : " + totalEmpWage);
-		}	
+		}
+	}
+	
+	public static void main(String[] args) {
+		System.out.println("Welcome to Employee Wage Computation Program using OOP's concepts");
+		EmpWage empWage = new EmpWage();
+		empWage.wageCalculation();
 	}
 }
